@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61a2d36d-1f7a-4f6f-b452-501c3c9057c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.ttbems.com/changning/TongJi/DataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataService.disco" MetadataType="Disco" ID="3c3eb50e-7b14-46d2-8d8c-e6100f52edf1" SourceId="1" SourceUrl="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?disco" />
+    <MetadataFile FileName="DataService.xsd" MetadataType="Schema" ID="4e4d4216-45a0-4ff0-a493-23999cda0537" SourceId="1" SourceUrl="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="8face58b-63ed-4229-911b-5c8679f3bded" SourceId="1" SourceUrl="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?wsdl" />
+    <MetadataFile FileName="DataService1.xsd" MetadataType="Schema" ID="477d696f-d543-4cf3-95b8-abce1b2ba36c" SourceId="1" SourceUrl="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataService1.wsdl" MetadataType="Wsdl" ID="3a01c1bd-d191-4e91-8aea-b133d7274507" SourceId="1" SourceUrl="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataService2.xsd" MetadataType="Schema" ID="7258c968-2425-42e4-a9eb-3f21a2fe5404" SourceId="1" SourceUrl="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

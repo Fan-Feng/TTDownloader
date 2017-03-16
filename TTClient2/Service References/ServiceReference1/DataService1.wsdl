@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www.ttbems.com/ChangNing/TongJi/DataService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DataService_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="DataService_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetBuildInfo_InputMessage">
+    <wsdl:part name="parameters" element="GetBuildInfo" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetBuildInfo_OutputMessage">
+    <wsdl:part name="parameters" element="GetBuildInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetEquipmentInfo_InputMessage">
+    <wsdl:part name="parameters" element="GetEquipmentInfo" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetEquipmentInfo_OutputMessage">
+    <wsdl:part name="parameters" element="GetEquipmentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWeatherHistory_InputMessage">
+    <wsdl:part name="parameters" element="GetWeatherHistory" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWeatherHistory_OutputMessage">
+    <wsdl:part name="parameters" element="GetWeatherHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWeatherStationInfo_InputMessage">
+    <wsdl:part name="parameters" element="GetWeatherStationInfo" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWeatherStationInfo_OutputMessage">
+    <wsdl:part name="parameters" element="GetWeatherStationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWeatherAVG_InputMessage">
+    <wsdl:part name="parameters" element="GetWeatherAVG" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWeatherAVG_OutputMessage">
+    <wsdl:part name="parameters" element="GetWeatherAVGResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetSubItems_InputMessage">
+    <wsdl:part name="parameters" element="GetSubItems" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetSubItems_OutputMessage">
+    <wsdl:part name="parameters" element="GetSubItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetSelectedSubEnergy_InputMessage">
+    <wsdl:part name="parameters" element="GetSelectedSubEnergy" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetSelectedSubEnergy_OutputMessage">
+    <wsdl:part name="parameters" element="GetSelectedSubEnergyResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetCircuitInfoData_InputMessage">
+    <wsdl:part name="parameters" element="GetCircuitInfoData" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetCircuitInfoData_OutputMessage">
+    <wsdl:part name="parameters" element="GetCircuitInfoDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetCircuitEnergyData_InputMessage">
+    <wsdl:part name="parameters" element="GetCircuitEnergyData" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetCircuitEnergyData_OutputMessage">
+    <wsdl:part name="parameters" element="GetCircuitEnergyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetMeterInfo_InputMessage">
+    <wsdl:part name="parameters" element="GetMeterInfo" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetMeterInfo_OutputMessage">
+    <wsdl:part name="parameters" element="GetMeterInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetMeterData_InputMessage">
+    <wsdl:part name="parameters" element="GetMeterData" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetMeterData_OutputMessage">
+    <wsdl:part name="parameters" element="GetMeterDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DataService">
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="urn:DataService/UserLogin" message="DataService_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/UserLoginResponse" message="DataService_UserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildInfo">
+      <wsdl:input wsaw:Action="urn:DataService/GetBuildInfo" message="DataService_GetBuildInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetBuildInfoResponse" message="DataService_GetBuildInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentInfo">
+      <wsdl:input wsaw:Action="urn:DataService/GetEquipmentInfo" message="DataService_GetEquipmentInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetEquipmentInfoResponse" message="DataService_GetEquipmentInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherHistory">
+      <wsdl:input wsaw:Action="urn:DataService/GetWeatherHistory" message="DataService_GetWeatherHistory_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWeatherHistoryResponse" message="DataService_GetWeatherHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherStationInfo">
+      <wsdl:input wsaw:Action="urn:DataService/GetWeatherStationInfo" message="DataService_GetWeatherStationInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWeatherStationInfoResponse" message="DataService_GetWeatherStationInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherAVG">
+      <wsdl:input wsaw:Action="urn:DataService/GetWeatherAVG" message="DataService_GetWeatherAVG_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWeatherAVGResponse" message="DataService_GetWeatherAVG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubItems">
+      <wsdl:input wsaw:Action="urn:DataService/GetSubItems" message="DataService_GetSubItems_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetSubItemsResponse" message="DataService_GetSubItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedSubEnergy">
+      <wsdl:input wsaw:Action="urn:DataService/GetSelectedSubEnergy" message="DataService_GetSelectedSubEnergy_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetSelectedSubEnergyResponse" message="DataService_GetSelectedSubEnergy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitInfoData">
+      <wsdl:input wsaw:Action="urn:DataService/GetCircuitInfoData" message="DataService_GetCircuitInfoData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetCircuitInfoDataResponse" message="DataService_GetCircuitInfoData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitEnergyData">
+      <wsdl:input wsaw:Action="urn:DataService/GetCircuitEnergyData" message="DataService_GetCircuitEnergyData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetCircuitEnergyDataResponse" message="DataService_GetCircuitEnergyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterInfo">
+      <wsdl:input wsaw:Action="urn:DataService/GetMeterInfo" message="DataService_GetMeterInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetMeterInfoResponse" message="DataService_GetMeterInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterData">
+      <wsdl:input wsaw:Action="urn:DataService/GetMeterData" message="DataService_GetMeterData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetMeterDataResponse" message="DataService_GetMeterData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
